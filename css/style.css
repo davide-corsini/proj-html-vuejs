@@ -13,6 +13,7 @@ body{
 .container{
     max-width: 80%;
     margin: 0 auto;
+    height: 100%;
 }
 .btn{
     padding: 10px 20px;
@@ -168,10 +169,12 @@ div.title-content h2{
     font-weight: 900;
     transform: translateZ(0) scale(1);
     line-height: 1.2;
+    color: #21333e;
 }
 h2.animation-title{
     position: relative;
     width: 40%;
+    color: #038484;
 }
 h2.animation-title span.highlight{
     height: 55%;
@@ -333,10 +336,67 @@ ul li:nth-child(2){
 /* leaders */
 section#leaders{
     background-color: orange;
-    height: 400px;
+    height: 800px;
     width: 100%;
-    /* qui va lo sfondo scroll  */
+    background-image: url('../img/bg-6.jpg');
+    background-position: center;
+    background-size: cover;
 }
+
+section#leaders .container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#leaders .row{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+#leaders .animation-title{
+        font-size: 4rem;
+    font-weight: 900;
+    transform: translateZ(0) scale(1);
+    line-height: 1.2;
+    color: #21333e;
+}
+
+#leaders h3{
+    font-weight: 700;
+    font-size: 0.80rem;
+    color: #4ca2a2;
+    text-transform: uppercase;
+}
+#leaders p{
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: #909fa2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* pricing */
 section#pricing{
