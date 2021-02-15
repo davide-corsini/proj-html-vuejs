@@ -10,11 +10,7 @@ var app = new Vue({
     data: {
         phone: '+1 (305) 1234-5678',
         mail: 'hello@example.com', 
-        ciao: 'come stai',
-        profile: '<i class="fas fa-search"></i>',
-        arrayNav: [
-            'Home', 'Services', 'About', 'Pricing', 'come stamparlo?' , 'Get in touch'
-        ]
+        arrayNav: ['Home', 'Services', 'About', 'Pricing']
     },
     created(){
         console.log(this.arrayHeader);

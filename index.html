@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
 <body>
@@ -54,16 +54,34 @@
                         <!-- questo diventa white solo onscroll -->
                         <!--chiedere a giack del discorso riutilizzo-->
                         <div class="logo">
-                            <span>NEX</span>
-                            <span>GEN</span>
+                            <div class="text-logo">
+                                <p class="title-nex"> 
+                                    <span class="sfondo-nex"></span>
+                                    NEX
+                                </p>
+                                <p>GEN</p>
+                            </div>
                         </div>
                         <ul class="menu-nav">
-                            <li v-for="e in arrayNav">{{e}}</li>
+                            <li v-for="lista in arrayNav">{{ lista }}</li>
+                            <li class="user"><i class="far fa-user"></i></li>
+                            <li><div class="btn">get in touch</div></li>
                         </ul>
                     </div>
                 </nav>
                 <div class="container">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias at, quis consectetur tempore illo eos quibusdam. Nesciunt, ullam! Obcaecati nemo et vero inventore ullam! Cumque aliquid delectus numquam quas. Quisquam.
+                    <div class="title-content">
+                        <h3 style="color: #00a6a6;">Express Delivery</h3>
+                        <h2 style="color: #21333e;">What are we going to deliver </h2>
+                        <h2 class="animation-title" style="color: #038484;">
+                            <span class="highlight"></span>
+                            today?</h2>
+                        <div class="my_btns">
+                            <div class="btn">get in touch</div>
+                            <div class="btn white">read more</div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -77,8 +95,108 @@
         <main>
 
             <section id="services">
-                {{ciao}}
+                <!-- container for margin -->
+                <div class="container">
+                    <!-- first row -->
+                    <div class="row">
+                        <div class="title-services">
+                            <h3 style="margin-bottom: 5%;">what we do</h3>
+                            <div class="title-font-services">
+                                <h2>
+                                    We offer a full range 
+                                </h2>
+                                <h2 class="animation-title2">
+                                    <span class="highlight"></span>
+                                    of delivery
+                                </h2> 
+                                <h2>
+                                    methods.
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="fast">
+
+                            <div class="container">
+                                <div class="icons-fast">
+                                    <i class="fas fa-truck"></i>
+
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <h3>Shipping Fast</h3>
+                                <p>Special fast delivery service that guarantees the arrival of the object on the same day as postage. Included monitoring
+                                via miobile app.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /first row -->
+
+                    <!-- start second row-->
+                    <div class="row second">
+                        <!-- start menu services -->
+                        <ul>
+                            <li>
+                                <div class="container">
+                                    <div class="icons-fast">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <h3>Motoboy</h3>
+                                    <p>Functional motoboy for delivery of documents and small objects.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="container">
+                                    <div class="icons-fast">
+                                        <i class="fas fa-caravan"></i>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <h3>Shuttle Van</h3>
+                                    <p>Suitable for medium sized loads that need digital tracking.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="container">
+                                    <div class="icons-fast">
+                                        <i class="fas fa-truck-loading"></i>                 
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                    <h3>Mini Truck</h3>
+                                    <p>For dry cargo deliveries with more cubic allocation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- /menu services -->
+                    </div>
+                    <!-- /end second row -->
+                </div>
+                <!-- /container -->
+
+
+
+
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <section id="leaders">
                 d flex-end
@@ -115,6 +233,7 @@
                 <div class="container">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam nulla iusto ea cumque quo! Sed dolorum quibusdam, rerum eos beatae itaque unde quam voluptates nesciunt corporis, atque mollitia eligendi.
                 </div>
+                <!-- <form @submit="(funzione)" action=""></form> -->
             </section>
         </footer>
         <!-- /footer -->

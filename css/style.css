@@ -5,7 +5,7 @@
 }
 
 body{
-    font-size: 15px;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -13,6 +13,20 @@ body{
 .container{
     max-width: 80%;
     margin: 0 auto;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: #038484;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f3f0;
 }
 
 header .header-top{
@@ -63,59 +77,263 @@ div.social{
 }
 
 header #jumbo{
-    height: 500px;
+    height: 600px;
     position: relative;
 }
 
 #jumbo nav{
     width: 100%;
-    height: 80px;
     font-size: 1.6rem;
-    padding: 1%;
-    background: rgba(255, 166, 0, 0.425);
-    position: -webkit-sticky;
+    /* position: -webkit-sticky;
     position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0; */
+    /* debug */
+    position: fixed;
     top: 0;
     left: 0;
+    margin-top: 45px;
+    
 }
 nav .nav-cont{
     display: flex;
-
+    padding: 1% 0;
 }
 
 nav .logo{
-    width: 30%;
-    background: red;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.text-logo{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    font-weight: 700;
+}
+
+p.title-nex{
+    position: relative;
+    color: #45baba;
+}
+
+p span.sfondo-nex{
+    width: 160%;
+    height: 150%;
+    position: absolute;
+    left: -50%;
+    top: -25%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    z-index: -1;
+    background-color:#c9dbd7;
 }
 
 #jumbo{
     background-image: url('../img/bg-13.jpg');
-    background-position: 50%, 70%;
+    background-repeat: no-repeat;
+    width: 100%;
     background-size: cover;
-  
 }
 #jumbo ul.menu-nav{
-    background: green;
-    width: 70%;
+    width: 65%;
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
+ul.menu-nav li.user{
+    background-color: #fff;
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    align-items: center;
+    width: 40px;
+    height: 90%;
+
+}
+
+
+
+#jumbo div.title-content{
+    max-width: 55%;
+    padding-top: 10%;
+}
+div.title-content h2{
+    font-size: 4rem;
+    font-weight: 900;
+    transform: translateZ(0) scale(1);
+    line-height: 1.2;
+}
+h2.animation-title{
+    position: relative;
+    width: 40%;
+}
+h2.animation-title span.highlight{
+    height: 55%;
+    width: 98%;
+    position: absolute;
+    bottom: 0%;
+    border-radius: 8px;
+    z-index: -1;
+    background-color:#c9dbd7;
+}
+
+div.my_btns{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+div.title-content .my_btns .btn{
+    margin-top: 1.4rem;
+}
+div.title-content .my_btns .btn.white{
+    background: transparent;
+    color: #038484;
+    border: 1px solid #038484;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* main */
+
+
 /* services */
 section#services{
-    height: 400px;
+    /* height: 400px; */
     width: 100%;
-    background: darkgreen;
+    background: #0f1217;
+    padding: 10% 0;
+    color: white;
 }
+#services .container .row{
+    width: 100%;
+    display: flex;
+}
+#services .container .row .title-services{
+    width: 40%;
+}
+#services .container .row .fast{
+    width: 60%;
+    background-color: #141b1e;
+    border-radius: 6px;
+    padding: 5% 0;
+}
+#services .container .row .title-services .title-font-services{
+    max-width: 70%;
+    word-break: break-word;
+    font-weight: 800;
+    font-size: 2rem;
+}
+h2.animation-title2{
+    position: relative;
+    min-width: 90%;
+    max-width: 95%;
+    z-index: 1;
+}
+h2.animation-title2 span.highlight{
+    width: 70%;
+    background-color: #038484;
+    height: 50%;
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+    z-index: -1;
+    border-radius: 6px;
+
+}
+section#services .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.icons-fast{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons-fast i{
+    font-size: 1.5rem;
+    color: #038484;
+}
+.icons-fast i:first-child{
+    font-size: 3rem;
+}
+div.fast .container h3{
+    font-size: 1.4rem;
+}
+div.fast .container p{
+    font-size: 1rem;
+}
+.row.second{
+    margin-top: 4%;
+    height: 200px;
+}
+.row.second ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+.row.second ul li{
+    height: 100%;
+    border-radius: 8px;
+    flex-basis: calc(100% / 3 - 10px);
+    background-color:  #141b1e;
+}
+ul li:nth-child(2){
+    margin: 0 20px;
+}
+/* /services */ 
+
+
+
+
+
+
+
+
+
+
 
 
 /* leaders */
 section#leaders{
     background-color: orange;
-        height: 400px;
+    height: 400px;
     width: 100%;
     /* qui va lo sfondo scroll  */
 }
