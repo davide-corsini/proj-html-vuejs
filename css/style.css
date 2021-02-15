@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general rulez */
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+header .header-top{
+    width: 100%;
+    height: 70px;
+    background: blue;
+}
+
+.container.head-top{
+    display: flex;
+    height: 100%;
+}
+.part-sx{
+    background: coral;
+    height: 100%;
+    width: 50%;
+    background: cyan;
+}
+.part-dx{
+    height: 100%;
+    width: 50%;
+    background: cyan;
+}
+
+
+header #jumbo{
+    height: 500px;
+    background: blueviolet;
+}
+
+#jumbo nav{
+    width: 100%;
+    height: 80px;
+    background: chartreuse;
+}
+
+
+/* main */
+/* services */
+section#services{
+    height: 400px;
+    width: 100%;
+    background: darkgreen;
+}
+
+
+/* leaders */
+section#leaders{
+    background-color: orange;
+        height: 400px;
+    width: 100%;
+    /* qui va lo sfondo scroll  */
+}
+
+/* pricing */
+section#pricing{
+    background: darkkhaki;
+    height: 400px;
+    width: 100%;
+}
+
+/* choose-us */
+section#choose-us{
+    width: 100%;
+    height: 400px;
+    background: darkmagenta;
+}
+
+/* footer */
+/* form */
+section#form{
+    height: 500px;
+    width: 100%;
+    background: deeppink;
+}
+
+section#form .form-cont{
+    display: flex;
+}
+
+div.form-dati{
+    width: 70%;
+    height: 100%;
+    background: dimgray;
+}
+
+div.contacts{
+    width: 30%;
+    height: 100%;
+    background-color: coral;
+}
+
+section#copyright{
+    height: 100px;
+    background: black;
+    color: #fff;
+}
