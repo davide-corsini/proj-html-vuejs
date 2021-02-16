@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/palettes.css">
+
     <!-- vue Js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <!-- font-awesome-cdn -->
@@ -49,7 +51,7 @@
                 
             </div>
             <div id="jumbo">
-                <nav @scroll="scrollDown" :class="ciao">
+                <nav @scroll="scrollDown">
                     <div class="nav-cont container">
                         <!-- questo diventa white solo onscroll -->
                         <!--chiedere a giack del discorso riutilizzo-->
@@ -78,7 +80,7 @@
                         <h3 style="color: #00a6a6;">Express Delivery</h3>
                         <h2>What are we going to deliver </h2>
                         <h2 class="animation-title" style="color: #038484;">
-                            <span class="highlight"></span>
+                            <span class="highlight evidenziaclear_blue"></span>
                             today?</h2>
                         <div class="my_btns">
                             <div class="btn">get in touch</div>
@@ -93,25 +95,25 @@
         <!-- start main -->
         <main>
             <!-- section services -->
-            <section id="services">
+            <section id="services" class="serviceBcg">
                 <!-- container for margin -->
-                <div class="container">
+                <div class="container white-title">
                     <!-- first row -->
                     <div class="row">
                         <div class="title-services">
-                            <h3 style="margin-bottom: 5%;">what we do</h3>
+                            <h3 class="clearBlue" style="margin-bottom: 5%;">what we do</h3>
                             <div class="title-font-services">
                                 <h2>
                                     We offer a full range 
                                 </h2>
                                 <h2 class="animation-title2">
-                                    <span class="highlight"></span>
+                                    <span class="highlight evidenzia_blue"></span>
                                     of delivery
                                 </h2> 
                                 <h2>methods.</h2>
                             </div>
                         </div>
-                        <div class="fast shipping" >
+                        <div class="fast shipping p_boxService" >
 
                             <div class="container">
                                 <div class="icons-fast">
@@ -130,7 +132,7 @@
                     <div class="row second">
                         <!-- start menu services -->
                         <ul>
-                            <li>
+                            <li class="p_boxService">
                                 <div class="container">
                                     <div class="icons-fast">
                                         <i class="fas fa-motorcycle"></i>
@@ -140,7 +142,7 @@
                                     <p>Functional motoboy for delivery of documents and small objects.</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="p_boxService">
                                 <div class="container">
                                     <div class="icons-fast">
                                         <i  class="fas fa-caravan"></i>
@@ -151,7 +153,7 @@
                                     <p>Suitable for medium sized loads that need digital tracking.</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="p_boxService">
                                 <div class="container">
                                     <div class="icons-fast">
                                         <i class="fas fa-truck-loading"></i>                 
@@ -175,7 +177,7 @@
                 <div class="container">
                     <div class="row">
                         <h3>who we are</h3>
-                        <h2 class="animation-title">Industry Leaders.</h2>
+                        <h2 class="animation-title" style="color: #21333e;">Industry Leaders.</h2>
                         <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
                         <p>We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
                         <div class="btn">read more</div>
@@ -196,29 +198,6 @@
                             development to implementation.</p>
                     </div>
                     <ul class="menu-pricing">
-                        <!-- <li v-for="element in princingArray">
-                            <i :class="element.iClass"></i>
-                            <p>{{ element.titlePrice}}</p>
-                        </li>
-                    --> 
-                        <!-- <li>
-                            <i :class="iClass[0]"></i>
-                            <p>{{titlePrice[0]}}</p>
-                        </li>
-                        <li>
-                            <i :class="iClass[1]"></i>
-                            <p>{{titlePrice[1]}}</p>
-                        </li>
-                        <li>
-                            <i :class="iClass[2]"></i>
-                            <p>{{titlePrice[2]}}</p>
-                        </li> -->
-
-                        <!-- <li v-for="element in titlePrice">
-                            <i :class="iClass"></i>
-                            <p>{{ element }}</p>
-                        </li>
-                    -->
                         <li>
                             <div class="container">
                                 <i class="fas fa-rocket"></i>
@@ -232,10 +211,10 @@
                                         <span>/mo</span>
                                     </div>
                                     <p class="my_list" v-for="(prova,index) in contract">{{prova}}
-                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
+                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address Collection') ? 'fas fa-check' : 'fas fa-times' "></i>
+                                        <i></i>
                                     </p>
                                 </div>
-
                             </div>
                         </li>
                         <li>
@@ -254,10 +233,7 @@
                                         <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
                                     </p>
                                 </div>
-
-                            </div>
-                                    
-
+                            </div>                                  
                         </li>
                         <li>
                             <div class="container">
@@ -279,56 +255,74 @@
                             </div>
                         </li>
                     </ul>
-
                 </div>
             </section>
             <!-- /princing -->
 
             <!-- choose us -->
             <section id="choose-us">
-                <div class="container">
-                    <h2 class="animation-title">Why choose us?</h2>
+                <div class="container white-title">
+                    <h2 class="animation-title white-title">Why choose us?</h2>
                     <p>We work intensively in search of ideals that can add up in the lives of our customers. This is what motivates us to
                     improve every day.</p>
                     <div class="btn">get in touch</div>
                 </div>
             </section>
             <!-- /choose us -->
-
-
         </main>
         <!-- /main -->
 
         <!-- start footer -->
         <footer>
-            <div class="finestra">
+
+
+
+
+
+            <div class="finestra evidenziaclear_blue" :class="active">
                 <h2 class="animation-title" style="font-size: 2rem; text-align: center;">Grazie per averci scelto</h2>
-                <span>nome e cognome utente</span>
+                <span>{{ name }}</span>
                 <p>Sei ufficialmente iscritto alla newsletter di NexGen</p>
-                <p>Riceverai una mail all'indirizzo....qui ci va la mail</p>
-                <div class="btn">Prosegui</div>
+                <p>Riceverai le tue credenziali al numero {{ phoneNumber }}</p>
+                <p>Riceverai una mail all'indirizzo {{ yourMail }}</p>
+                <div @click="returnSend" @keyup.enter="returnSend" class="btn">Prosegui</div>
             </div>
                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <section id="form">
                 <div class="container form-cont">
                     <div class="form-dati">
-                        <h4>send message</h4>
-                        <h3 class="animation-title">Get in touch</h3>
-                        <p>We will respond to your message as soon as possible</p>
+                        <div class="title-form">
+                            <h4 style="text-transform: uppercase;">send message</h4>
+                            <h3 class="animation-title">Get in touch</h3>
+                            <p>We will respond to your message as soon as possible</p>
+                        </div>
                         <form @submit="sendForm" action="">
                             <div class="divisor-input">
-                                <input required v-model="name" class="input-date" type="text" placeholder="Name">
-                                <input required v-model="yourMail" class="input-date" type="text" placeholder="Email">
+                                <input required v-model="name" class="input-date palette-form" type="text" placeholder="Name">
+                                <input required v-model="yourMail" class="input-date palette-form" type="text" placeholder="Email">
                             </div>
                             <div class="divisor-input">
-                                <input required v-model="phoneNumber" class="input-date" type="text" placeholder="Phone">
-                                <input required v-model="info" class="input-date" type="text" placeholder="More info">
+                                <input required v-model="phoneNumber" class="input-date palette-form" type="text" placeholder="Phone">
+                                <input required v-model="info" class="input-date palette-form" type="text" placeholder="More info">
                             </div>
                         
-                            <!-- <textarea name=""  class="input-date max" id="" cols="30" rows="10" placeholder="Message..."></textarea> -->
-                            <input required v-model="discussion" type="textarea" class="max" placeholder="Message">
-                            <!-- <div @click="sendForm" class="btn">send</div> -->
-                            <button type="submit">SEND</button>
+                            <textarea class="palette-form" style="width: 100%;" required v-model="discussion" name=""  class="input-date area" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                            <button class="btn" type="submit" style="margin-top: 2%;">SEND</button>
                         </form>
                     </div>
 
@@ -339,7 +333,7 @@
                         <p><i class="fas fa-phone-alt"></i>{{ phone }}</p>
                         <p><i class="fas fa-envelope"></i> {{ mail }}</p>
                         <p><i class="fas fa-map-marker-alt"></i> {{ map }}</p>
-                        <div class="btn white" style="margin-top: 1.6rem;">view map</div>
+                        <div class="btn white view-map" style="margin-top: 1.6rem;">view map</div>
                     </div>
 
                 </div>
@@ -350,7 +344,6 @@
                     <p>Enjoy the low price. We are tracking any intention of piracy.</p>
                     <p>© 2020 NEXGEN is Proudly Powered by Codings.</p>
                 </div>
-                <!-- <form @submit="(funzione)" action=""></form> -->
             </section>
         </footer>
         <!-- /footer -->

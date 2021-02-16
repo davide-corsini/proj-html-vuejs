@@ -1,0 +1,30 @@
+.evidenzia_blue{
+    background-color: #038484;
+}
+.clearBlue{
+    color: #038484;
+}
+.evidenziaclear_blue{
+    background-color:#c9dbd7;
+}
+.serviceBcg{
+    background: #111117;
+
+}
+.p_boxService{
+    background-color: #141b1e;
+}
+
+.white-title{
+    color: #f0f3f0;
+}
+
+.palette-form{
+    color: #696b6c;
+    background-color: rgba(0, 0, 0, 0.075);
+    outline: 0;
+    margin-top: 2%;
+    border-radius: 8px;
+    border: none;
+    padding: 1%;
+}

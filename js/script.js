@@ -8,23 +8,9 @@
 var app = new Vue({
     el: '#app',
     data: {
-        ciao: '',
         phone: '+1 (305) 1234-5678',
         mail: 'hello@example.com', 
-        map: 'Main Avenue, 987',
-        // princingArray: [
-        //     {
-        //         titlePrice: ['Standard' , 'Home', 'Ultimate'],
-        //     },{
-        //         iClass: ['fas fa-rocket', 'fas fa-briefcase', 'fas fa-gem']
-
-        //     },
-        //     {
-        //         contract: ['National Coverage', 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance']
-        //     }
-        // ],
-    
-        
+        map: 'Main Avenue, 987',  
         // part of pricing
         titlePrice: ['Standard', 'Home', 'Ultimate'],
         iClass: ['fas fa-rocket', 'fas fa-briefcase', 'fas fa-gem'],
@@ -35,16 +21,13 @@ var app = new Vue({
         arrayNav: ['Home', 'Services', 'About', 'Pricing'],
 
         //form
-        result : [
-            //mi conviene fare un array?
-            
-        ],
         name: '',
         yourMail: '',
         info: '',
         phoneNumber: '',
         discussion: '',
-        modelWindow: ''
+        modelWindow: '',
+        active: false
 
     },
     methods:{
@@ -57,16 +40,22 @@ var app = new Vue({
                 }
             
         },
-        pulseBack(){
-            return !this.active;
-        },
         sendForm(){
             this.modelWindow = !this.modelWindow;
-            if(this.name.length > 0 && this.yourMail.length > 0){
-                console.log('funziona');
-                alert(this.name + this.surname);
-
+            if(this.modelWindow == true){
+                this.active = 'active';
+                this.name='';
+                this.yourMail='';
+                this.info='';
+                this.phoneNumber='';
+                this.discussion='';
             }
+            else{
+                this.active = "";
+            }
+        },
+        returnSend(){
+            return this.active = false;
         }
         }
     
