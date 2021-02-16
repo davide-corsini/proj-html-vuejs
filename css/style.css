@@ -249,10 +249,12 @@ section#services .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .icons-fast i{
     font-size: 1.5rem;
     color: #038484;
+    z-index: 2;
 }
 .icons-fast i:first-child{
     font-size: 3rem;
@@ -496,4 +498,74 @@ section#copyright{
     height: 100px;
     background: black;
     color: #fff;
+}
+
+
+/* effects vue js */
+span.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0%;
+    z-index: 0;
+    display: none;
+}
+span.circle.block{
+    animation-duration: 1s;
+    display: flex;
+    animation-name:  pulseArrow;
+    animation-timing-function: ease;
+}
+@keyframes pulseArrow{
+    0% { transform: translateY(0); 
+        background-color:  #7be6e6; }
+    30%{transform: scale(0); 
+    background-color:  #45b1b1; }
+    50%{ transform: scale(0);
+    background-color:  #49aaaa; }
+    90% { transform: scale(1.5);
+    background-color:  #338285;  }
+    100% { display: none; 
+    background-color:  #038484; }
+
+}
+
+.row.second ul li,
+.shipping{
+    animation-duration: 2s;
+}
+
+.bounce{
+    animation-name:  bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30%{ transform: translateY(-10px); }
+    50%{ transform: translateY(0px);}
+    100% { transform: translateY( +10px ); }
+}
+
+.icons-fast i.white-i{
+    color: white;
+}
+footer{
+    position: relative;
+}
+div.finestra{
+    width: 600px;
+    height: 400px;
+    background-color: coral;
+    border: 1px solid #038484;
+    border-radius: 8px;
+    position: absolute; 
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }

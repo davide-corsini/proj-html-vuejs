@@ -49,7 +49,7 @@
                 
             </div>
             <div id="jumbo">
-                <nav>
+                <nav @scroll="scrollDown" :class="ciao">
                     <div class="nav-cont container">
                         <!-- questo diventa white solo onscroll -->
                         <!--chiedere a giack del discorso riutilizzo-->
@@ -107,13 +107,13 @@
                                 <h2>methods.</h2>
                             </div>
                         </div>
-                        <div class="fast">
+                        <div class="fast shipping" :class="bounce">
 
-                            <div class="container">
+                            <div @mouseover="pulseArrow" @mouseleave="pulseBack" class="container">
                                 <div class="icons-fast">
-                                    <i class="fas fa-truck"></i>
-
-                                    <i class="fas fa-arrow-right"></i>
+                                    <i :class="whiteI" class="fas fa-truck"></i>
+                                    <i :class="whiteI" class="fas fa-arrow-right"></i>
+                                    <span class="circle" :class="active"></span>
                                 </div>
                                 <h3>Shipping Fast</h3>
                                 <p>Special fast delivery service that guarantees the arrival of the object on the same day as postage. Included monitoring
@@ -127,31 +127,35 @@
                     <div class="row second">
                         <!-- start menu services -->
                         <ul>
-                            <li>
+                            <li :class="bounce" @mouseover="pulseArrow" @mouseleave="pulseBack">
                                 <div class="container">
                                     <div class="icons-fast">
-                                        <i class="fas fa-motorcycle"></i>
-                                        <i class="fas fa-arrow-right"></i>
+                                        <i :class="whiteI" class="fas fa-motorcycle"></i>
+                                        <i :class="whiteI" class="fas fa-arrow-right"></i>
+                                        <span class="circle" :class="active"></span>
                                     </div>
                                     <h3>Motoboy</h3>
                                     <p>Functional motoboy for delivery of documents and small objects.</p>
                                 </div>
                             </li>
-                            <li>
+                            <li :class="bounce" @mouseover="pulseArrow">
                                 <div class="container">
                                     <div class="icons-fast">
-                                        <i class="fas fa-caravan"></i>
-                                        <i class="fas fa-arrow-right"></i>
+                                        <i :class="whiteI" class="fas fa-caravan"></i>
+                                        <i :class="whiteI" class="fas fa-arrow-right">
+                                        </i>
+                                        <span class="circle" :class="active"></span>
                                     </div>
                                     <h3>Shuttle Van</h3>
                                     <p>Suitable for medium sized loads that need digital tracking.</p>
                                 </div>
                             </li>
-                            <li>
+                            <li :class="bounce" @mouseover="pulseArrow">
                                 <div class="container">
                                     <div class="icons-fast">
-                                        <i class="fas fa-truck-loading"></i>                 
-                                        <i class="fas fa-arrow-right"></i>
+                                        <i :class="whiteI" class="fas fa-truck-loading"></i>                 
+                                        <i :class="whiteI" class="fas fa-arrow-right"></i>
+                                        <span class="circle" :class="active"></span>
                                     </div>
                                     <h3>Mini Truck</h3>
                                     <p>For dry cargo deliveries with more cubic allocation.</p>
@@ -295,9 +299,16 @@
         </main>
         <!-- /main -->
 
-
         <!-- start footer -->
         <footer>
+            <div class="finestra">
+                <h2 class="animation-title" style="font-size: 2rem; text-align: center;">Grazie per averci scelto</h2>
+                <span>nome e cognome utente</span>
+                <p>Sei ufficialmente iscritto alla newsletter di NexGen</p>
+                <p>Riceverai una mail all'indirizzo....qui ci va la mail</p>
+                <div class="btn">Prosegui</div>
+            </div>
+                        
             <section id="form">
                 <div class="container form-cont">
                     <div class="form-dati">
@@ -306,19 +317,20 @@
                         <p>We will respond to your message as soon as possible</p>
                         <form action="">
                             <div class="divisor-input">
-                                <input class="input-date" type="text" placeholder="Name">
-                                <input class="input-date" type="text" placeholder="Email">
+                                <input v-model="name" class="input-date" type="text" placeholder="Name">
+                                <input v-model="yourMail" class="input-date" type="text" placeholder="Email">
                             </div>
                             <div class="divisor-input">
-                                <input class="input-date" type="text" placeholder="Phone">
-                                <input class="input-date" type="text" placeholder="More info">
+                                <input v-model="phoneNumber" class="input-date" type="text" placeholder="Phone">
+                                <input v-model="info" class="input-date" type="text" placeholder="More info">
                             </div>
                         
                             <!-- <textarea name=""  class="input-date max" id="" cols="30" rows="10" placeholder="Message..."></textarea> -->
-                            <input type="textarea" class="max" placeholder="Message">
+                            <input v-model="discussion" type="textarea" class="max" placeholder="Message">
                         </form>
-                        <div class="btn">send</div>
+                        <div @click="sendForm" class="btn">send</div>
                     </div>
+
                     <div class="contacts">
                         <h3>Example Inc.</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit exercitationem.</p>
@@ -330,6 +342,7 @@
                     </div>
 
                 </div>
+
             </section>
             <section id="copyright">
                 <div class="container" style="justify-content: space-between; align-items: center;">
