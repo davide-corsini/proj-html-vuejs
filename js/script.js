@@ -23,10 +23,7 @@ var app = new Vue({
         //         contract: ['National Coverage', 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance']
         //     }
         // ],
-        pulse: false,
-        active: '',
-        bounce: document.getElementsByClassName('bounce'),
-        whiteI : '',
+    
         
         // part of pricing
         titlePrice: ['Standard', 'Home', 'Ultimate'],
@@ -38,6 +35,10 @@ var app = new Vue({
         arrayNav: ['Home', 'Services', 'About', 'Pricing'],
 
         //form
+        result : [
+            //mi conviene fare un array?
+            
+        ],
         name: '',
         yourMail: '',
         info: '',
@@ -56,36 +57,8 @@ var app = new Vue({
                 }
             
         },
-        pulseArrow(){
-            // this.pulse = index;
-            //come gli passo sto index?
-            this.pulse = !this.pulse;
-            if(this.pulse == true){
-                this.bounce = 'bounce';
-                this.active = 'block';
-                this.whiteI = 'white-i';
-                setTimeout(() =>{
-                    this.active = '';
-                    this.bounce = '';
-                    this.whiteI = '';
-
-                },1500)
-            }
-            else{
-                this.active = '';
-                this.bounce = '';
-                this.whiteI = '';
-            }
-        },
         pulseBack(){
             return !this.active;
-        },
-        funzioneTempo(){
-            setTimeout(() => {
-                this.contacts[index].online = true;
-
-
-            }, 100);
         },
         sendForm(){
             this.modelWindow = !this.modelWindow;
@@ -96,12 +69,6 @@ var app = new Vue({
             }
         }
         }
-        // onBounce(){
-        //     this.pulse = !this.pulse;
-        //     if(this.pulse = true){
-        //     }
-        //     else{
-        //     }
-        // }
+    
     
 })
