@@ -23,14 +23,16 @@ var app = new Vue({
             }
         ],
         
-            
+        
         titlePrice: ['Standard', 'Home', 'Ultimate'],
             
         iClass: ['fas fa-rocket', 'fas fa-briefcase', 'fas fa-gem'],
 
+        standard: '490',
+        professional: '890',
+        ultimate: '1390',    
             
-            
-        contract: ['National Coverage', 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance'],         
+        contract: ['National Coverage' , 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance'],         
         
         arrayNav: ['Home', 'Services', 'About', 'Pricing'],
     },

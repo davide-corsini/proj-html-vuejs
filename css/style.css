@@ -8,7 +8,6 @@ body{
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
 }
-
 /* general rulez */
 .container{
     max-width: 85%;
@@ -29,15 +28,21 @@ body{
     justify-content: center;
     align-items: center;
     color: #f0f3f0;
+    cursor: pointer;
 }
-
+.animation-title{
+        font-size: 4rem;
+    font-weight: 900;
+    transform: translateZ(0) scale(1);
+    line-height: 1.2;
+    color: #21333e;
+}
 header .header-top{
     width: 100%;
     height: 45px;
     background: #21333e;
     color: #acaeb1;
 }
-
 .container.head-top{
     display: flex;
     height: 100%;
@@ -58,7 +63,6 @@ div.call-number{
     display: flex;
     justify-content: space-between;
 }
-
 .phone-number{
     width: 42%;
     display: flex;
@@ -71,56 +75,49 @@ div.call-number{
     justify-content: space-around;
     align-items: center;
 }
-
 div.social{
     width: 30%;
     display: flex;
     justify-content: space-around;
 }
-
 header #jumbo{
     height: 600px;
     position: relative;
 }
-
 #jumbo nav{
     width: 100%;
     font-size: 1.6rem;
-    /* position: -webkit-sticky;
+    position: -webkit-sticky;
     position: sticky;
     z-index: 3;
     top: 0;
-    left: 0; */
-    /* debug */
-    position: fixed;
-    top: 0;
     left: 0;
-    margin-top: 45px;
+    /* debug */
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    /* margin-top: 45px; */
     
 }
 nav .nav-cont{
     display: flex;
     padding: 1% 0;
 }
-
 nav .logo{
     width: 35%;
     display: flex;
     align-items: center;
 }
-
 .text-logo{
     display: flex;
     justify-content: space-around;
     width: 35%;
     font-weight: 700;
 }
-
 p.title-nex{
     position: relative;
     color: #45baba;
 }
-
 p span.sfondo-nex{
     width: 160%;
     height: 150%;
@@ -129,11 +126,9 @@ p span.sfondo-nex{
     top: -25%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-
     z-index: -1;
     background-color:#c9dbd7;
 }
-
 #jumbo{
     background-image: url('../img/bg-13.jpg');
     background-repeat: no-repeat;
@@ -157,9 +152,6 @@ p span.sfondo-nex{
     width: 40px;
     height: 90%;
 } */
-
-
-
 #jumbo div.title-content{
     max-width: 55%;
     padding-top: 10%;
@@ -201,39 +193,7 @@ div.title-content .my_btns .btn.white{
     border: 1px solid #038484;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* main */
-
-
 /* services */
 section#services{
     /* height: 400px; */
@@ -323,9 +283,6 @@ ul li:nth-child(2){
 }
 /* /services */ 
 
-
-
-
 /* leaders */
 section#leaders{
     background-color: orange;
@@ -352,13 +309,7 @@ section#leaders .container{
     padding-bottom: 5%;
 }
 
-.animation-title{
-        font-size: 4rem;
-    font-weight: 900;
-    transform: translateZ(0) scale(1);
-    line-height: 1.2;
-    color: #21333e;
-}
+
 
 #leaders h3{
     font-weight: 700;
@@ -372,71 +323,92 @@ section#leaders .container{
     color: #909fa2;
 }
 
-
-
-
 /* pricing */
 section#pricing{
-    background: darkkhaki;
-    height: 400px;
+    /* height: 500px; */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5% 0;
+    background: #eef4ed;
 }
 section#pricing .container{
-    background-color: blue;
     width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-ul.menu-pricing{
-    height: 300px;
-    background-color: pink;
-    width: 100%;
-    list-style: none;
-    display: flex;
-}
-
-
-
-ul.menu-pricing li{
-    height: 100%;
-    border-radius: 8px;
-    flex-basis: calc(100% / 3 - 10px);
-    background-color:  white;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+}
+#pricing ul.menu-pricing{
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+#pricing div.introduction-pricing{
+    text-align: center;
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pricing div.introduction-pricing h4{
+    color: #45baba;
+}
+#pricing div.introduction-pricing > *{
+
+    margin: 0.5rem 0;
+}
+#pricing div.introduction-pricing p{
+    font-size: 1.3rem;
+}
+
+#pricing ul.menu-pricing li{
+    height: 100%;
+    border-radius: 8px;
+    padding: 6% 0;
+    flex-basis: calc(100% / 3 - 30px);
+    background-color:  white;
+    display: flex;
+    flex-direction: column;
     
 }
-
-ul.menu-pricing li:nth-child(2){
-    margin: 0 20px;
+#pricing ul.menu-pricing li > *{
+    line-height: 2.9;
 }
 
-ul.menu-pricing li i{
+#pricing ul.menu-pricing li:nth-child(2){
+    margin: 0 60px;
+}
+
+#pricing ul.menu-pricing li i{
     font-size: 2rem;
+    color:  #038484;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#pricing div.price{
+    color:  #038484;
+    text-align: center;
+}
+#pricing div.price span.animation-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color:  #038484;
+}
+#pricing p.my_list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+#pricing .cont-offert{
+    width:80%;
+}
+#pricing  li p.my_list i{
+    font-size: 1.1rem;
+}
 
 /* choose-us */
 section#choose-us{
@@ -446,20 +418,17 @@ section#choose-us{
     background-size: cover;
     background-position: center;
 }
-
 #choose-us .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 #choose-us .container h2.animation-title{
     color: #f0f3f0;
     width: 100%;
     text-align: center;
 }
-
 #choose-us p{
     color: #f0f3f0;
     margin: 1.2rem 0;
@@ -467,31 +436,62 @@ section#choose-us{
     max-width: 50%;
     text-align: center;
 }
-
 /* footer */
 /* form */
 section#form{
-    height: 500px;
+    height: 450px;
     width: 100%;
-    background: deeppink;
 }
-
 section#form .form-cont{
     display: flex;
 }
-
+.form-dati{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#form .divisor-input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#form input.input-date{
+    margin-top: 0.6rem;
+    flex-basis: calc(98% / 2);
+    padding: 1%;
+    border-radius: 5px;
+}
+#form input.max{
+    margin-top: 0.6rem;
+    width: 100%;
+    height: 150px;
+    padding: 0%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 div.form-dati{
-    width: 70%;
+    width: 55%;
     height: 100%;
-    background: dimgray;
 }
-
 div.contacts{
-    width: 30%;
+    width: 45%;
     height: 100%;
-    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
 }
-
+div.contacts h3{
+    font-size: 1.5rem;
+}
+.contacts p{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.contacts p i{
+    margin-right: 10px;
+}
+/* copyrigth */
 section#copyright{
     height: 100px;
     background: black;

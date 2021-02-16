@@ -80,16 +80,11 @@
                             <div class="btn">get in touch</div>
                             <div class="btn white">read more</div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
         </header>
         <!-- /header -->
-
-
 
         <!-- start main -->
         <main>
@@ -109,9 +104,7 @@
                                     <span class="highlight"></span>
                                     of delivery
                                 </h2> 
-                                <h2>
-                                    methods.
-                                </h2>
+                                <h2>methods.</h2>
                             </div>
                         </div>
                         <div class="fast">
@@ -189,22 +182,22 @@
             </section>
             <!-- /leaders -->
 
-
-
             <!-- pricing -->
             <section id="pricing">
                 <div class="container">
-                    <h4>monthly plans</h4>
-                    <h2>Pricing table</h2>
-                    <p>We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy
-                    development to implementation.</p>
+                    <div class="introduction-pricing">
+                        <h4>monthly plans</h4>
+                        <h2 class="animation-title">Pricing table</h2>
+                        <p>We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy
+                            development to implementation.</p>
+                    </div>
                     <ul class="menu-pricing">
                         <!-- <li v-for="element in princingArray">
                             <i :class="element.iClass"></i>
                             <p>{{ element.titlePrice}}</p>
                         </li>
                     --> 
-                        <li>
+                        <!-- <li>
                             <i :class="iClass[0]"></i>
                             <p>{{titlePrice[0]}}</p>
                         </li>
@@ -215,27 +208,72 @@
                         <li>
                             <i :class="iClass[2]"></i>
                             <p>{{titlePrice[2]}}</p>
-                        </li>
+                        </li> -->
 
                         <!-- <li v-for="element in titlePrice">
                             <i :class="iClass"></i>
                             <p>{{ element }}</p>
                         </li>
                     -->
-                        <!-- <li>
-                            <i class="fas fa-rocket"></i>
-                            <h4>Standard</h4>
-                            
+                        <li>
+                            <div class="container">
+                                <i class="fas fa-rocket"></i>
+                                <h4>Standard</h4>
+                                <div class="cont-offert">
+                                    <div class="price">
+                                        <span>$</span>
+                                        <span class="animation-title">
+                                            {{ standard }}
+                                        </span>
+                                        <span>/mo</span>
+                                    </div>
+                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
+                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
+                                    </p>
+                                </div>
+
+                            </div>
                         </li>
                         <li>
-                            <i class="fas fa-briefcase"></i>
-                            <h4>Professional</h4>
+                            <div class="container">
+                                <i class="fas fa-briefcase"></i>
+                                <h4>Professional</h4>
+                                <div class="cont-offert">
+                                    <div class="price">
+                                        <span>$</span>
+                                        <span class="animation-title">
+                                            {{ professional }}
+                                        </span>
+                                        <span>/mo</span>
+                                    </div>
+                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
+                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
+                                    </p>
+                                </div>
+
+                            </div>
+                                    
 
                         </li>
                         <li>
-                            <i class="fas fa-gem"></i>
-                            <h4>Ultimate</h4>
-                        </li> -->
+                            <div class="container">
+                                <i class="fas fa-gem"></i>
+                                <h4>Ultimate</h4>
+                                <div class="cont-offert">
+                                    <div class="price">
+                                        <span>$</span>
+                                        <span class="animation-title">
+                                            {{ ultimate }}
+                                        </span>
+                                        <span>/mo</span>
+                                    </div>
+                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
+                                        <i
+                                            :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
 
                 </div>
@@ -252,6 +290,8 @@
                 </div>
             </section>
             <!-- /choose us -->
+
+
         </main>
         <!-- /main -->
 
@@ -261,25 +301,32 @@
             <section id="form">
                 <div class="container form-cont">
                     <div class="form-dati">
-                        <h3></h3>
-                        <h2 class="animation-title">Get in touch</h2>
+                        <h4>send message</h4>
+                        <h3 class="animation-title">Get in touch</h3>
                         <p>We will respond to your message as soon as possible</p>
                         <form action="">
-                            <input class="input-date" type="text">
-                            <input class="input-date" type="text">
-                            <input class="input-date" type="text">
-                            <input class="input-date" type="text">
-                            <input type="text">
+                            <div class="divisor-input">
+                                <input class="input-date" type="text" placeholder="Name">
+                                <input class="input-date" type="text" placeholder="Email">
+                            </div>
+                            <div class="divisor-input">
+                                <input class="input-date" type="text" placeholder="Phone">
+                                <input class="input-date" type="text" placeholder="More info">
+                            </div>
+                        
+                            <!-- <textarea name=""  class="input-date max" id="" cols="30" rows="10" placeholder="Message..."></textarea> -->
+                            <input type="textarea" class="max" placeholder="Message">
                         </form>
+                        <div class="btn">send</div>
                     </div>
                     <div class="contacts">
                         <h3>Example Inc.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi omnis a tempora atque commodi et, numquam, ullam esse quis fugit, animi distinctio tempore nulla quisquam voluptatum qui praesentium! Incidunt, exercitationem.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quaerat commodi, modi itaque ut voluptates veritatis aliquid ipsa vero ab expedita impedit fuga id corrupti. Assumenda mollitia placeat animi ullam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit placeat animi ullam?</p>
                         <p><i class="fas fa-phone-alt"></i>{{ phone }}</p>
                         <p><i class="fas fa-envelope"></i> {{ mail }}</p>
-                        <p><i class="fas fa-envelope"></i> {{ map }}</p>
-                        <div class="btn white">view map</div>
+                        <p><i class="fas fa-map-marker-alt"></i> {{ map }}</p>
+                        <div class="btn white" style="margin-top: 1.6rem;">view map</div>
                     </div>
 
                 </div>
@@ -294,11 +341,6 @@
         </footer>
         <!-- /footer -->
     </div>
-
-
-
-
-
     <script src="js/script.js"></script>
 </body>
 </html>
