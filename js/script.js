@@ -10,7 +10,29 @@ var app = new Vue({
     data: {
         phone: '+1 (305) 1234-5678',
         mail: 'hello@example.com', 
-        arrayNav: ['Home', 'Services', 'About', 'Pricing']
+        map: 'Main Avenue, 987',
+        princingArray: [
+            {
+                titlePrice: ['Standard' , 'Home', 'Ultimate'],
+            },{
+                iClass: ['fas fa-rocket', 'fas fa-briefcase', 'fas fa-gem']
+
+            },
+            {
+                contract: ['National Coverage', 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance']
+            }
+        ],
+        
+            
+        titlePrice: ['Standard', 'Home', 'Ultimate'],
+            
+        iClass: ['fas fa-rocket', 'fas fa-briefcase', 'fas fa-gem'],
+
+            
+            
+        contract: ['National Coverage', 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance'],         
+        
+        arrayNav: ['Home', 'Services', 'About', 'Pricing'],
     },
     created(){
         console.log(this.arrayHeader);

@@ -72,8 +72,8 @@
                 <div class="container">
                     <div class="title-content">
                         <h3 style="color: #00a6a6;">Express Delivery</h3>
-                        <h2 style="">What are we going to deliver </h2>
-                        <h2 class="animation-title">
+                        <h2>What are we going to deliver </h2>
+                        <h2 class="animation-title" style="color: #038484;">
                             <span class="highlight"></span>
                             today?</h2>
                         <div class="my_btns">
@@ -191,37 +191,67 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <!-- pricing -->
             <section id="pricing">
-                <p>TITOLOOOOOOO</p>
-                <ul>
-                    <li>INSERISCO DI JS I LOGHI E TITOLI DEI VARI MENU </li>
-                    <li>Anche i check e i no-check di js</li>
-                </ul>
-            </section>
+                <div class="container">
+                    <h4>monthly plans</h4>
+                    <h2>Pricing table</h2>
+                    <p>We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy
+                    development to implementation.</p>
+                    <ul class="menu-pricing">
+                        <!-- <li v-for="element in princingArray">
+                            <i :class="element.iClass"></i>
+                            <p>{{ element.titlePrice}}</p>
+                        </li>
+                    --> 
+                        <li>
+                            <i :class="iClass[0]"></i>
+                            <p>{{titlePrice[0]}}</p>
+                        </li>
+                        <li>
+                            <i :class="iClass[1]"></i>
+                            <p>{{titlePrice[1]}}</p>
+                        </li>
+                        <li>
+                            <i :class="iClass[2]"></i>
+                            <p>{{titlePrice[2]}}</p>
+                        </li>
 
-            <section id="choose-us">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut aliquam animi, quam reiciendis eos numquam quas quo laudantium fugit tempora dolor fuga, nobis cumque voluptate voluptatibus possimus molestias nulla.
+                        <!-- <li v-for="element in titlePrice">
+                            <i :class="iClass"></i>
+                            <p>{{ element }}</p>
+                        </li>
+                    -->
+                        <!-- <li>
+                            <i class="fas fa-rocket"></i>
+                            <h4>Standard</h4>
+                            
+                        </li>
+                        <li>
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Professional</h4>
+
+                        </li>
+                        <li>
+                            <i class="fas fa-gem"></i>
+                            <h4>Ultimate</h4>
+                        </li> -->
+                    </ul>
+
+                </div>
             </section>
+            <!-- /princing -->
+
+            <!-- choose us -->
+            <section id="choose-us">
+                <div class="container">
+                    <h2 class="animation-title">Why choose us?</h2>
+                    <p>We work intensively in search of ideals that can add up in the lives of our customers. This is what motivates us to
+                    improve every day.</p>
+                    <div class="btn">get in touch</div>
+                </div>
+            </section>
+            <!-- /choose us -->
         </main>
         <!-- /main -->
 
@@ -231,16 +261,33 @@
             <section id="form">
                 <div class="container form-cont">
                     <div class="form-dati">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore dolores recusandae! Ipsum in minus dolore libero non beatae aut numquam sed delectus sit veniam dignissimos quis ipsa, illo accusamus!
+                        <h3></h3>
+                        <h2 class="animation-title">Get in touch</h2>
+                        <p>We will respond to your message as soon as possible</p>
+                        <form action="">
+                            <input class="input-date" type="text">
+                            <input class="input-date" type="text">
+                            <input class="input-date" type="text">
+                            <input class="input-date" type="text">
+                            <input type="text">
+                        </form>
                     </div>
                     <div class="contacts">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam modi quas qui quos ipsum deleniti mollitia consequatur totam est, praesentium excepturi magnam necessitatibus hic, iusto voluptatem enim exercitationem accusamus quaerat!
+                        <h3>Example Inc.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi omnis a tempora atque commodi et, numquam, ullam esse quis fugit, animi distinctio tempore nulla quisquam voluptatum qui praesentium! Incidunt, exercitationem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quaerat commodi, modi itaque ut voluptates veritatis aliquid ipsa vero ab expedita impedit fuga id corrupti. Assumenda mollitia placeat animi ullam?</p>
+                        <p><i class="fas fa-phone-alt"></i>{{ phone }}</p>
+                        <p><i class="fas fa-envelope"></i> {{ mail }}</p>
+                        <p><i class="fas fa-envelope"></i> {{ map }}</p>
+                        <div class="btn white">view map</div>
                     </div>
+
                 </div>
             </section>
             <section id="copyright">
-                <div class="container">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam nulla iusto ea cumque quo! Sed dolorum quibusdam, rerum eos beatae itaque unde quam voluptates nesciunt corporis, atque mollitia eligendi.
+                <div class="container" style="justify-content: space-between; align-items: center;">
+                    <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+                    <p>© 2020 NEXGEN is Proudly Powered by Codings.</p>
                 </div>
                 <!-- <form @submit="(funzione)" action=""></form> -->
             </section>
