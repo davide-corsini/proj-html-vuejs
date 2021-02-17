@@ -300,6 +300,8 @@ section#pricing .container{
 }
 #pricing div.introduction-pricing h2{
     text-align: center;
+    width: 100%;
+    color:  #28363c;
 }
 #pricing div.introduction-pricing > *{
     margin: 0.5rem 0;
