@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- link css -->
+    <link rel="stylesheet" href="css/myframework.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/palettes.css">
-
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/logo.png">
     <!-- vue Js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <!-- font-awesome-cdn -->
@@ -24,24 +26,24 @@
 
     <!-- start header -->
         <header>
-            <div class="header-top">
-                <div class="container head-top">
-                    <div class="part-sx">
+            <div class="header-top my_width100">
+                <div class="container head-top d_flex_r">
+                    <div class="part-sx d_flex_r">
                         <i class="fas fa-clock"></i>
                         <p style="padding-left: 2%;">Open Hours: Mon - Sat - 9:00 - 18:00</p>
                     </div>
-                    <div class="part-dx">
-                        <div class="call-number">
-                            <div class="phone-number">
+                    <div class="part-dx d_flex_r">
+                        <div class="call-number d_flex_r">
+                            <div class="phone-number d_flex_r">
                                 <i class="fas fa-phone-alt"></i>
                                 {{ phone }}
                             </div>
-                            <div class="mail">
+                            <div class="mail d_flex_r">
                                 <i class="fas fa-envelope"></i>
                                 {{ mail }}
                             </div>
                         </div>
-                        <div class="social">
+                        <div class="social d_flex_r">
                             <i class="fab fa-facebook-f"></i>
                             <i class="fab fa-twitter"></i>
                             <i class="fab fa-linkedin-in"></i>
@@ -50,21 +52,23 @@
                 </div>
                 
             </div>
-            <div id="jumbo">
-                <nav @scroll="scrollDown">
-                    <div class="nav-cont container">
+            <div id="jumbo" class="my_relative my_width100">
+                <nav @scroll="scrollDown" class="medium-font my_width100" :class="{change_color: scrollPosition > 0}">
+                    <div class="nav-cont container d_flex_r">
                         <!-- questo diventa white solo onscroll -->
                         <!--chiedere a giack del discorso riutilizzo-->
-                        <div class="logo">
-                            <div class="text-logo">
-                                <p class="title-nex"> 
+                        <div class="logo d_flex_r">
+                            <div class="text-logo d_flex_r">
+                                <p class="title-nex my_relative"> 
+                                    <span>
+                                        NEX
+                                    </span>
                                     <span class="sfondo-nex"></span>
-                                    NEX
                                 </p>
                                 <p>GEN</p>
                             </div>
                         </div>
-                        <ul class="menu-nav">
+                        <ul class="menu-nav list_none d_flex_r">
                             <li v-for="lista in arrayNav">{{ lista }}</li>
                             <li class="user"><i class="far fa-user"></i></li>
                             <li>                                  
@@ -76,13 +80,13 @@
                     </div>
                 </nav>
                 <div class="container">
-                    <div class="title-content">
+                    <div class="title-content d_flex_c">
                         <h3 style="color: #00a6a6;">Express Delivery</h3>
                         <h2>What are we going to deliver </h2>
-                        <h2 class="animation-title" style="color: #038484;">
+                        <h2 class="animation-title my_relative" style="color: #038484;">
                             <span class="highlight evidenziaclear_blue"></span>
                             today?</h2>
-                        <div class="my_btns">
+                        <div class="my_btns d_flex_r">
                             <div class="btn">get in touch</div>
                             <div class="btn white">read more</div>
                         </div>
@@ -95,18 +99,18 @@
         <!-- start main -->
         <main>
             <!-- section services -->
-            <section id="services" class="serviceBcg">
+            <section id="services" class="serviceBcg my_width100 my_pd_topx10 my_pd_bottomx10">
                 <!-- container for margin -->
-                <div class="container white-title">
+                <div class="container white-title d_flex_c">
                     <!-- first row -->
-                    <div class="row">
+                    <div class="row my_width100 d_flex_r">
                         <div class="title-services">
                             <h3 class="clearBlue" style="margin-bottom: 5%;">what we do</h3>
                             <div class="title-font-services">
                                 <h2>
                                     We offer a full range 
                                 </h2>
-                                <h2 class="animation-title2">
+                                <h2 class="animation-title2 my_relative">
                                     <span class="highlight evidenzia_blue"></span>
                                     of delivery
                                 </h2> 
@@ -116,7 +120,7 @@
                         <div class="fast shipping p_boxService" >
 
                             <div class="container">
-                                <div class="icons-fast">
+                                <div class="icons-fast d_flex_r my_relative my_width100">
                                     <i  class="fas fa-truck"></i>
                                     <i  class="fas fa-arrow-right beat"></i>
                                 </div>
@@ -129,12 +133,12 @@
                     <!-- /first row -->
 
                     <!-- start second row-->
-                    <div class="row second">
+                    <div class="row second my_m_topx4">
                         <!-- start menu services -->
-                        <ul>
+                        <ul class="list_none my_width100 d_flex_r">
                             <li class="p_boxService">
                                 <div class="container">
-                                    <div class="icons-fast">
+                                    <div class="icons-fast d_flex_r">
                                         <i class="fas fa-motorcycle"></i>
                                         <i  class="fas fa-arrow-right beat"></i>
                                     </div>
@@ -144,7 +148,7 @@
                             </li>
                             <li class="p_boxService">
                                 <div class="container">
-                                    <div class="icons-fast">
+                                    <div class="icons-fast d_flex_r">
                                         <i  class="fas fa-caravan"></i>
                                         <i  class="fas fa-arrow-right beat">
                                         </i>
@@ -155,7 +159,7 @@
                             </li>
                             <li class="p_boxService">
                                 <div class="container">
-                                    <div class="icons-fast">
+                                    <div class="icons-fast d_flex_r">
                                         <i class="fas fa-truck-loading"></i>                 
                                         <i class="fas fa-arrow-right beat"></i>
                                     </div>
@@ -173,11 +177,11 @@
             <!-- /section services -->
 
             <!-- section leaders -->
-            <section id="leaders">
-                <div class="container">
-                    <div class="row">
+            <section id="leaders" class="my_width100">
+                <div class="container grey_p">
+                    <div class="row d_flex_c my_relative">
                         <h3>who we are</h3>
-                        <h2 class="animation-title" style="color: #21333e;">Industry Leaders.</h2>
+                        <h2 class="animation-title my_relative" style="color: #21333e;">Industry Leaders.</h2>
                         <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
                         <p>We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
                         <div class="btn">read more</div>
@@ -189,68 +193,100 @@
             <!-- /leaders -->
 
             <!-- pricing -->
-            <section id="pricing">
+            <section id="pricing" class="my_width100 d_flex_c">
                 <div class="container">
-                    <div class="introduction-pricing">
+                    <div class="introduction-pricing d_flex_c my_width100">
                         <h4>monthly plans</h4>
-                        <h2 class="animation-title">Pricing table</h2>
+                        <h2 class="animation-title my_relative my_width100">Pricing table</h2>
                         <p>We can help you deliver and execute your future, wherever you compete, using the latest technologies, from strategy
                             development to implementation.</p>
                     </div>
-                    <ul class="menu-pricing">
+                    <ul class="menu-pricing d_flex_r list_none my_width100">
                         <li>
                             <div class="container">
+                                <div class="special d_flex_r">
+                                    <i class="fas fa-arrow-right beat"></i>
+                                </div>
                                 <i class="fas fa-rocket"></i>
                                 <h4>Standard</h4>
                                 <div class="cont-offert">
                                     <div class="price">
                                         <span>$</span>
-                                        <span class="animation-title">
+                                        <span class="animation-title my_relative">
                                             {{ standard }}
                                         </span>
                                         <span>/mo</span>
                                     </div>
-                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
-                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address Collection') ? 'fas fa-check' : 'fas fa-times' "></i>
-                                        <i></i>
-                                    </p>
+                                    <div class="pricing-item my_m_topx10">
+                                        <div class="each-item">National Coverage<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Unilimited Motoboy<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Address Collection<span class="intern"><i class="fas fa-times medium-font"></i></span></div>
+                                        <div class="each-item">Mobile App Tracking<span class="intern"><i class="fas fa-times medium-font"></i></span></div>
+                                        <div class="each-item">Cargo Insurance<span class="intern"><i class="fas fa-times medium-font"></i></span></div>
+                                    </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="max-box">
+                            <div class="most-popular my_width100">
+                                <div class="badge evidenzia_blue">
+                                    <div class="my_relative">
+                                        <span>
+                                            most
+                                        </span>
+                                        <span>
+                                            popular
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="freccia d_flex_r">
+                                    <i class="fas fa-arrow-right beat"></i>
+                                </div>
+                                    
+                            </div>
                             <div class="container">
                                 <i class="fas fa-briefcase"></i>
                                 <h4>Professional</h4>
                                 <div class="cont-offert">
                                     <div class="price">
                                         <span>$</span>
-                                        <span class="animation-title">
+                                        <span class="animation-title my_relative">
                                             {{ professional }}
                                         </span>
                                         <span>/mo</span>
                                     </div>
-                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
-                                        <i :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
-                                    </p>
+                                    <div class="pricing-item my_m_topx10">
+                                        <div class="each-item">National Coverage<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Unilimited Motoboy<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Address Collection<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Mobile App Tracking<span class="intern"><i class="fas fa-times medium-font"></i></span></div>
+                                        <div class="each-item">Cargo Insurance<span class="intern"><i class="fas fa-times medium-font"></i></span></div>
+                                    </div>
                                 </div>
                             </div>                                  
                         </li>
                         <li>
                             <div class="container">
+                                <div class="special d_flex_r">
+                                    <i class="fas fa-arrow-right beat"></i>
+                                </div>
                                 <i class="fas fa-gem"></i>
                                 <h4>Ultimate</h4>
                                 <div class="cont-offert">
                                     <div class="price">
                                         <span>$</span>
-                                        <span class="animation-title">
+                                        <span class="animation-title my_relative">
                                             {{ ultimate }}
                                         </span>
                                         <span>/mo</span>
                                     </div>
-                                    <p class="my_list" v-for="(prova,index) in contract">{{prova}}
-                                        <i
-                                            :class="contract[index].includes('National Coverage','Unlimited Motoboy','Address') ? 'fas fa-check' : 'fas fa-times' "></i>
-                                    </p>
+                                    <div class="pricing-item my_m_topx10">
+                                        <div class="each-item">National Coverage<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Unilimited Motoboy<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Address Collection<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Mobile App Tracking<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                        <div class="each-item">Cargo Insurance<span class="intern"><i class="fas fa-check medium-font"></i></span></div>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -260,10 +296,15 @@
             <!-- /princing -->
 
             <!-- choose us -->
-            <section id="choose-us">
+            <section id="choose-us" class="my_width100">
                 <div class="container white-title">
-                    <h2 class="animation-title white-title">Why choose us?</h2>
-                    <p>We work intensively in search of ideals that can add up in the lives of our customers. This is what motivates us to
+                    <h2 class="animation-title white-title my_relative">Why choose 
+                        
+                        <span class="my_relative">us
+                            <span class="evidenzia_blue"></span>
+                        </span>
+                    </h2>
+                    <p class="grey_nurse">We work intensively in search of ideals that can add up in the lives of our customers. This is what motivates us to
                     improve every day.</p>
                     <div class="btn">get in touch</div>
                 </div>
@@ -274,49 +315,36 @@
 
         <!-- start footer -->
         <footer>
-
-
-
-
-
             <div class="finestra evidenziaclear_blue" :class="active">
-                <h2 class="animation-title" style="font-size: 2rem; text-align: center;">Grazie per averci scelto</h2>
+                <h2 class="animation-title my_relative" style="font-size: 2rem; text-align: center;">Grazie per averci scelto</h2>
                 <span>{{ name }}</span>
                 <p>Sei ufficialmente iscritto alla newsletter di NexGen</p>
                 <p>Riceverai le tue credenziali al numero {{ phoneNumber }}</p>
                 <p>Riceverai una mail all'indirizzo {{ yourMail }}</p>
-                <div @click="returnSend" @keyup.enter="returnSend" class="btn">Prosegui</div>
+                <div @click="returnSend" class="btn">Prosegui</div>
             </div>
                         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="form">
-                <div class="container form-cont">
-                    <div class="form-dati">
-                        <div class="title-form">
-                            <h4 style="text-transform: uppercase;">send message</h4>
-                            <h3 class="animation-title">Get in touch</h3>
+            <section id="form" class="my_width100">
+                <div class="container form-cont d_flex_r">
+                    <div class="form-dati d_flex_c">
+                        <div class="title-form my_m_bottomx3">
+                            <h4 class="clearBlue" style="text-transform: uppercase;">send message</h4>
+                            <h3 class="animation-title my_relative">Get in 
+                                
+                                
+                                <span class="clearBlue my_relative">
+                                    Touch
+                                    <span class="clearBluebcg"></span>
+                                </span>
+                            </h3>
                             <p>We will respond to your message as soon as possible</p>
                         </div>
-                        <form @submit="sendForm" action="">
-                            <div class="divisor-input">
+                        <form @submit.prevent="sendForm" action="">
+                            <div class="divisor-input d_flex_r">
                                 <input required v-model="name" class="input-date palette-form" type="text" placeholder="Name">
                                 <input required v-model="yourMail" class="input-date palette-form" type="text" placeholder="Email">
                             </div>
-                            <div class="divisor-input">
+                            <div class="divisor-input d_flex_r">
                                 <input required v-model="phoneNumber" class="input-date palette-form" type="text" placeholder="Phone">
                                 <input required v-model="info" class="input-date palette-form" type="text" placeholder="More info">
                             </div>
@@ -326,14 +354,18 @@
                         </form>
                     </div>
 
-                    <div class="contacts">
+                    <div class="contacts d_flex_c my_m_topx5 my_m_leftx3 my_pd_leftx2">
                         <h3>Example Inc.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit exercitationem.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit placeat animi ullam?</p>
-                        <p><i class="fas fa-phone-alt"></i>{{ phone }}</p>
-                        <p><i class="fas fa-envelope"></i> {{ mail }}</p>
-                        <p><i class="fas fa-map-marker-alt"></i> {{ map }}</p>
-                        <div class="btn white view-map" style="margin-top: 1.6rem;">view map</div>
+                        <p class="medium-font">Lorem ipsum dolor sit amet consectetur adipisicing elit exercitationem.</p>
+                        <p class="medium-font">Lorem ipsum dolor sit amet consectetur adipisicing elit placeat animi ullam?</p>
+                        <div style="margin-top: 5%;">
+                            <p class="clearBlue"><i class="fas fa-phone-alt"></i>{{ phone }}</p>
+                            <p class="clearBlue"><i class="fas fa-envelope"></i> {{ mail }}</p>
+                            <p class="clearBlue"><i class="fas fa-map-marker-alt"></i> {{ map }}</p>
+                        </div>
+                            <a class="txt_dec_none btn white view-map" style="margin-top: 1.6rem;" href="#services">
+                                view map
+                            </a>
                     </div>
 
                 </div>

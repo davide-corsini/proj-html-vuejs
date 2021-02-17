@@ -1,6 +1,9 @@
 .evidenzia_blue{
     background-color: #038484;
 }
+.clearBluebcg{
+    background-color: #6df3ef91;
+}
 .clearBlue{
     color: #038484;
 }
@@ -14,9 +17,14 @@
 .p_boxService{
     background-color: #141b1e;
 }
-
+.grey_p{
+    color: #696b6c;
+}
 .white-title{
     color: #f0f3f0;
+}
+.grey_nurse{
+    color: #e5e8e4d8;
 }
 
 .palette-form{
@@ -28,3 +36,89 @@
     border: none;
     padding: 1%;
 }
+
+/* typography */
+.standard-font{
+    font-size: 1rem;
+}
+
+.half-font{
+    font-size: 0.5rem;
+}
+
+.medium-font{
+    font-size: 0.9rem!important;
+}
+.big-font{
+    font-size: 1.4rem;
+}
+
+/* effects hover js */
+
+div.finestra{
+    display: none;
+}
+div.finestra.active{
+    width: 500px;
+    height: 400px;
+    border: 1px solid #038484;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+    transition: all 0.2s ease-in 0s;
+}
+.fast.shipping:not(.no-hover):hover,
+#services li:not(.no-hover):hover,
+#pricing li:not(.no-hover):hover{
+    transform: translateY(-7.5px);
+}
+.fast.shipping:not(.no-hover):hover i,
+#services li:not(.no-hover):hover i
+{
+    color: #fff;
+    transition: all 0.6s ease-in-out 0s;
+
+}
+.beat{
+    border-radius: 50%;
+    display: none;
+}
+#services li:not(.no-hover):hover i.beat,
+.fast.shipping:not(.no-hover):hover i.beat,
+#pricing li:not(.no-hover):hover i.beat{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(36, 89, 112);
+    opacity: 0.5s;
+    animation: mymove 1s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes mymove{
+    0.5%{}
+    80%{}
+    100%{background-color: transparent;}
+}
+div.btn.white.view-map:not(.no-hover):hover{
+    background-color: #2bb2b1;
+    color: white;
+    transition: all 0.6s ease-in-out 0s;
+}
+.btn:not(.no-hover):hover{
+    background-color: #2bb2b1;
+    color: white;
+    transition: all 0.6s ease-in-out 0s;
+}
+button{
+    border: none;
+}
+

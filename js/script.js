@@ -19,7 +19,7 @@ var app = new Vue({
         ultimate: '1390',    
         contract: ['National Coverage' , 'Unlimited Motoboy', 'Address Collection', 'Mobile App Tracking', 'Cargo Insurance'],         
         arrayNav: ['Home', 'Services', 'About', 'Pricing'],
-
+        arrayCheck: [],
         //form
         name: '',
         yourMail: '',
@@ -27,28 +27,31 @@ var app = new Vue({
         phoneNumber: '',
         discussion: '',
         modelWindow: '',
-        active: false
-
+        active: false,
+        scrollPosition: null
+        // navbar: document.getElementsByTagName('nav')
+    },
+    mounted() {
+        window.addEventListener('scroll', this.scrollDown);
     },
     methods:{
         scrollDown(){
-                if (window.scrollY > 0) {
-                    ciao.setAttribute(
-                        'style',
-                        'background-color: red;'
-                    )
-                }
-            
+            this.scrollPosition = window.scrollY;           
         },
         sendForm(){
             this.modelWindow = !this.modelWindow;
             if(this.modelWindow == true){
+                
                 this.active = 'active';
                 this.name='';
                 this.yourMail='';
                 this.info='';
                 this.phoneNumber='';
                 this.discussion='';
+                setTimeout(() => {
+                    this.active = '';
+
+                }, 5000)
             }
             else{
                 this.active = "";
